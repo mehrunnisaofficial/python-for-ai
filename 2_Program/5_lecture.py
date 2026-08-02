@@ -218,8 +218,9 @@ So yes, this program still works! 🎉
 # =====================================================
 
 # https://youtu.be/nLRL_NcnK-4?t=12773
+new = "Chatgpt"
 
-i = 10
-while(i >= 1):
-    print(i)
-    i -= 1
+world = "noor"
+
+print(world)
+new(world)
