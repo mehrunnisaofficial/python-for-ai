@@ -1,5 +1,4 @@
-# Lecture 02: Functions in Python
-### A Complete Beginner's Guide
+# Lecture 02: Functions in Python ( little more topics )
 
 ---
 
