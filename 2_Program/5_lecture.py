@@ -1,143 +1,195 @@
-# # # # WHILE LOOP
+# =====================================================
+#                   WHILE LOOP
+# =====================================================
 
-# # # i = 1
-# # # while i <= 5:
-# # #     print(i)
-# # #     i += 1  # here i = 5
-
-# # # # cat program
-# # # while (i <= 10):  # so this code won't work until we change i value
-# # #     print("Meow")
-# # #     i += 1
+# i = 1
+# while i <= 5:
+#     print(i)
+#     i += 1  # here i = 5
 
 
-# # # # another way to do the same code is 
-# # # z = 4
-# # # while z >= 1:
-# # #     print("bark")
-# # #     z -= 1
-
-# # # # for loop and list
-# # # for i in [0,1,2,3]:
-# # #     print("Meow")
-
-# # # # the fault is it does print but what if i have to print million times?
-# # # # do i need to type all the numbers? no, we can use range function to do that
-# # # for i in range(5):  # this will print 0,1,2,3,4
-# # #     print("Meow")
+# Cat Program
+# while i <= 10:  # This code won't work until we change the value of i
+#     print("Meow")
+#     i += 1
 
 
-# # # # another cool way in python is 
-# # # print("Meow\n" * 5, end = "")  # this will print meow 5 times
+# Another way to do the same code
+# z = 4
+# while z >= 1:
+#     print("bark")
+#     z -= 1
 
 
-# # # ask the user from positive number and print meow that many times
-# # i = int(input("Enter a positive number: "))
-# # while(i <= 0):
-# #     if i <= 0:
-# #         i = int(input("Enter a positive number: "))
-# #             break;
+# =====================================================
+#              FOR LOOP WITH A LIST
+# =====================================================
 
-# #if (i > 0):
-# #    for j in range(i):
-# #          print("Meow")
+# for i in [0, 1, 2, 3]:
+#     print("Meow")
+
+# The problem is that it works, but what if I have to print
+# something a million times?
+# Do I need to type all the numbers?
+# No! We can use the range() function.
+
+# for i in range(5):  # This will iterate over 0, 1, 2, 3, 4
+#     print("Meow")
 
 
+# Another cool way in Python
+# print("Meow\n" * 5, end="")  # Prints Meow 5 times
 
-# # another way to do the same code is
+
+# =====================================================
+#        ASK THE USER FOR A POSITIVE NUMBER
+# =====================================================
+
+# i = int(input("Enter a positive number: "))
+#
+# while i <= 0:
+#     if i <= 0:
+#         i = int(input("Enter a positive number: "))
+#         break
+#
+# if i > 0:
+#     for j in range(i):
+#         print("Meow")
+
+
+# =====================================================
+#                 METHOD 1
+# =====================================================
+
 # while True:
 #     n = int(input("Enter the positive number: "))
+#
 #     if n < 0:
 #         continue
 #     else:
 #         break
+#
 # for i in range(n):
 #     print("Meow")
 
-# # here what is happening is that the while loop run forever until the code break
-# # and code will break when n > 0
-# # if n < 0 it will continue 
-# # because of continue the rest below statements is gonna left and than it code went back
-# # to the starting of while loop block
+# What is happening here?
+#
+# while True means the loop will run forever until break is reached.
+#
+# If n < 0:
+#     continue skips the remaining statements inside the loop
+#     and immediately goes back to the beginning.
+#
+# If n >= 0:
+#     break stops the loop, and the for loop starts.
 
 
+# =====================================================
+#                 METHOD 2
+# =====================================================
 
-# # anothe way to do the same code is
 # while True:
 #     num = int(input("Enter the positive number: "))
+#
 #     if num > 0:
 #         break
-
+#
 # for i in range(num):
 #     print("Meow")
 
-# # here what is happening is while true means the code will run forever until
-# # the code break happen
-# # and code break will happen when the value of i > 0
+# What is happening here?
+#
+# while True means the code will keep running forever.
+# The loop only stops when break executes.
+# break happens only if num > 0.
 
 
-# """
-# while True:
-#     n = int(input("Enter the positive number: "))
-#     if n < 0:
-#         pass
-#     else:
-#         break
+# =====================================================
+#                  USING pass
+# =====================================================
 
-# for i in range(n):
-#     print("Meow")
+"""
+while True:
+    n = int(input("Enter the positive number: "))
 
-# n < 0 → True
-# pass executes. (It does nothing.)
-# The if block ends.
-# The while loop reaches its end.
-# Since it's while True, it starts again automatically.
+    if n < 0:
+        pass
+    else:
+        break
 
-# So yes, this program still works! 🎉
-# """
+for i in range(n):
+    print("Meow")
 
+Explanation:
 
+n < 0 → True
 
-# making the same code using function
+pass executes.
+(It literally does nothing.)
 
-# def main():
-#     number = get_number()
-#     print_Meow(number)
+The if block ends.
+The while loop reaches its end.
 
+Since the condition is while True,
+the loop automatically starts again.
 
-# def get_number():
-#     while True:
-#         i = int(input("Enter the number: "))
-#         if i > 0:
-#             return i
-
-# def print_Meow(n):
-#     for i in range(n):
-#         print("Meow")
-
-# main()
+So yes, this program still works! 🎉
+"""
 
 
+# =====================================================
+#          MAKING THE SAME PROGRAM USING FUNCTIONS
+# =====================================================
 
 # def main():
 #     number = get_number()
 #     print_Meow(number)
-
-
+#
+#
 # def get_number():
 #     while True:
 #         i = int(input("Enter the number: "))
+#
 #         if i > 0:
 #             return i
-
+#
+#
 # def print_Meow(n):
 #     for i in range(n):
 #         print("Meow")
-
+#
+#
 # main()
 
 
-# harry porter
+# =====================================================
+#                  SAME CODE AGAIN
+# =====================================================
+
+# def main():
+#     number = get_number()
+#     print_Meow(number)
+#
+#
+# def get_number():
+#     while True:
+#         i = int(input("Enter the number: "))
+#
+#         if i > 0:
+#             return i
+#
+#
+# def print_Meow(n):
+#     for i in range(n):
+#         print("Meow")
+#
+#
+# main()
+
+
+# =====================================================
+#                  HARRY POTTER
+# =====================================================
 
 # student = ["Harmioni", "Harry", "Ron"]
 
@@ -145,20 +197,29 @@
 #     print(student[i])
 
 
-# # another way to do it in python
+# Another Pythonic way
+
 # for stud in student:
 #     print(stud)
 
 
-# another way to do this code
-
+# =====================================================
+#                ANOTHER WAY
+# =====================================================
 
 # student = ["Harmioni", "Harry", "Ron"]
-
+#
 # for i in range(len(student)):
-#     print(i+1,":",student[i], end = "\n")
+#     print(i + 1, ":", student[i], end="\n")
 
 
+# =====================================================
+#                  DICTIONARY
+# =====================================================
 
-# dictionary
-#https://youtu.be/nLRL_NcnK-4?t=12773
+# https://youtu.be/nLRL_NcnK-4?t=12773
+
+i = 10
+while(i >= 1):
+    print(i)
+    i -= 1
