@@ -1,6 +1,7 @@
 # Python for AI
 
-A complete guide to learning Python for AI Engineering through detailed notes, hands-on projects, practical examples, and real-world applications.
+A complete guide to learning Python for AI Engineering through detailed notes, hands-on projects, practical examples, and real-world applications.  
+
 
 ---
 
@@ -12,7 +13,8 @@ This repository is my attempt to build a complete Python resource for anyone int
 
 As I learn, I'll document everything here in a structured and beginner-friendly way, from Python fundamentals to advanced concepts. Every topic is written with the goal of making it simple to understand, practical to apply, and easy to revisit.
 
-Whether you're learning Python for the first time or refreshing your knowledge before diving into Machine Learning, I hope this repository helps you build a strong foundation.
+Whether you're learning Python for the first time or refreshing your knowledge before diving into Machine Learning, I hope this repository helps you build a strong foundation.  
+
 
 ---
 
@@ -27,6 +29,7 @@ Whether you're learning Python for the first time or refreshing your knowledge b
 * Resources and references
 * Best practices and tips
 
+    
 ---
 
 ## 𖦹 Repository Structure
@@ -43,7 +46,8 @@ python-for-ai/
 └── README.md
 ```
 
-Each section is organized to make learning easy to follow and simple to navigate.
+Each section is organized to make learning easy to follow and simple to navigate.  
+
 
 ---
 
@@ -57,6 +61,7 @@ This repository is for:
 * Anyone who prefers learning through detailed notes and hands-on practice
 * Developers looking to strengthen their Python fundamentals
 
+
 ---
 
 ## 𖦹 Contributing
@@ -65,7 +70,8 @@ Suggestions, improvements, and corrections are always welcome.
 
 If you find an error or have an idea that could make this repository better, feel free to open an issue or submit a pull request.
 
-Learning is better when we learn together.
+Learning is better when we learn together.  
+
 
 ---
 
