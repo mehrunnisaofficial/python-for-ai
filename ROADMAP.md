@@ -111,3 +111,25 @@ Throughout this repository, you'll build practical projects to strengthen your u
 ---
 
 This roadmap will continue to evolve as new topics, projects, and learning resources are added.
+
+---
+
+# Resources
+
+## Official Documentation
+
+- Python Documentation
+- Python Tutorial
+- Python Standard Library
+
+## Courses
+
+- CS50P
+
+## Practice Platforms
+
+- Exercism
+- HackerRank
+- LeetCode
+
+
