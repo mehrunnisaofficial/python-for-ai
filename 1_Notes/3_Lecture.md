@@ -1370,3 +1370,16 @@ pow(n, 2)
 > Functions are the building blocks of organized programs. Master **definition vs call**, **parameters vs arguments**, **scope**, and **side effects vs return values**, and you'll have a rock-solid foundation for everything that follows in Python.
 
 **End of Lecture 02.**
+
+---
+
+## 🐾 Thanks for studying with me! 🐾
+
+That wraps up **Lecture 2 — Functions in Python** all in one cozy little `.md` file. 🖤🤍 Hope it made things click a little easier. See you in the next one! 👋
+
+📌 **Follow for more notes & updates:**
+- 📸 Insta: [@mehrunnisa.ai](https://www.instagram.com/mehrunnisa.ai/)
+- ✍️ Substack: [The Epoch](https://theepoch.substack.com/)
+- 🎥 YouTube: [@mehrunnisa.ai](https://www.youtube.com/@Mehrunnisa-ai)
+
+---

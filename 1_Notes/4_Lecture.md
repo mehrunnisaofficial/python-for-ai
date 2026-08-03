@@ -423,3 +423,20 @@ flowchart TD
 | ----- | ----- |
 | False | True  |
 | True  | False |
+
+
+----
+
+---
+
+## 🐾 Thanks for studying with me! 🐾
+
+That wraps up **Lecture 4 — Conditionals and Boolean Logic** all in one cozy little `.md` file. 🖤🤍 Hope it made things click a little easier. See you in the next one! 👋
+
+📌 **Follow for more notes & updates:**
+- 📸 Insta: [@mehrunnisa.ai](https://www.instagram.com/mehrunnisa.ai/)
+- ✍️ Substack: [The Epoch](https://theepoch.substack.com/)
+- 🎥 YouTube: [@mehrunnisa.ai](https://www.youtube.com/@Mehrunnisa-ai)
+
+
+---

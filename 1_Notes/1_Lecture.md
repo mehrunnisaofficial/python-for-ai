@@ -1976,3 +1976,17 @@ ValueError: too many values to unpack (expected 2)
 > Re-read this lecture slowly, and actually *type out* every example yourself. Programming is a skill built through practice, not just reading.
 
 Congratulations — you've completed Lecture 1: Python Basics!
+
+
+---
+
+## 🐾 Thanks for studying with me! 🐾
+
+That wraps up **Lecture 1 — Python Basics** all in one cozy little `.md` file. 🖤🤍 Hope it made things click a little easier. See you in the next one! 👋
+
+📌 **Follow for more notes & updates:**
+- 📸 Insta: [@mehrunnisa.ai](https://www.instagram.com/mehrunnisa.ai/)
+- ✍️ Substack: [The Epoch](https://theepoch.substack.com/)
+- 🎥 YouTube: [@mehrunnisa.ai](https://www.youtube.com/@Mehrunnisa-ai)
+
+---

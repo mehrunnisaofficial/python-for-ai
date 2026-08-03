@@ -213,14 +213,7 @@ So yes, this program still works! 🎉
 #     print(i + 1, ":", student[i], end="\n")
 
 
-# =====================================================
-#                  DICTIONARY
-# =====================================================
 
-# https://youtu.be/nLRL_NcnK-4?t=12773
-new = "Chatgpt"
 
-world = "noor"
 
-print(world)
-new(world)
+

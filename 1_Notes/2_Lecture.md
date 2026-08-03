@@ -1439,3 +1439,17 @@ Python raises a `ValueError`, because it cannot interpret non-numeric text as a 
 - Remember: `int()` cuts, `round()` thinks.
 
 Congratulations — you've completed Lecture 2: Data Types and Numeric Operations! Practice the exercises above before moving on.
+
+
+---
+
+## 🐾 Thanks for studying with me! 🐾
+
+That wraps up **Lecture 2 — Data Types and Numeric Operations** all in one cozy little `.md` file. 🖤🤍 Hope it made things click a little easier. See you in the next one! 👋
+
+📌 **Follow for more notes & updates:**
+- 📸 Insta: [@mehrunnisa.ai](https://www.instagram.com/mehrunnisa.ai/)
+- ✍️ Substack: [The Epoch](https://theepoch.substack.com/)
+- 🎥 YouTube: [@mehrunnisa.ai](https://www.youtube.com/@Mehrunnisa-ai)
+
+---
