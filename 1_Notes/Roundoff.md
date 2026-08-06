@@ -521,3 +521,6 @@ This behavior is called **floating-point precision** and is a normal characteris
 **Don't worry if this feels confusing right now.** Once you learn about binary numbers and floating-point representation, this behavior will make complete sense.
 
 </div>
+
+<img width="900" height="1474" alt="floating-point-note" src="https://github.com/user-attachments/assets/fcae51d9-3894-4385-8d09-8cad13703c38" />
+
