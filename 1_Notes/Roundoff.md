@@ -441,3 +441,47 @@ The original value remains unchanged.
 * In Python, `round(number)` rounds to the nearest whole number.
 * `round(number, n)` rounds to **n decimal places**.
 * `:.2f` always displays exactly **2 decimal places**, even if the original number has more.
+
+
+> [!NOTE]
+> ### Why does `round(2.225, 2)` sometimes return `2.22` instead of `2.23`?
+>
+> You might expect:
+>
+> ```python
+> round(2.225, 2)
+> ```
+>
+> Output:
+>
+> ```text
+> 2.23
+> ```
+>
+> However, Python often returns:
+>
+> ```text
+> 2.22
+> ```
+>
+> While:
+>
+> ```python
+> round(2.235, 2)
+> ```
+>
+> returns:
+>
+> ```text
+> 2.23
+> ```
+>
+> This **does not mean `round()` is broken**.
+>
+> The reason is that computers store decimal numbers using **binary (base-2)**, not decimal (base-10). Many decimal values, such as `2.225`, **cannot be represented exactly in binary**. Instead, Python stores the closest possible binary approximation.
+>
+> So, when `round()` performs the rounding, it rounds the value that is **actually stored in memory**, which may be slightly smaller or larger than the decimal number you typed.
+>
+> This behavior is called **floating-point precision** and is a normal characteristic of almost every programming language, not just Python.
+>
+> **Don't worry if this feels confusing right now.** Once you learn about binary numbers and floating-point representation, this behavior will make complete sense.
