@@ -443,99 +443,81 @@ The original value remains unchanged.
 * `:.2f` always displays exactly **2 decimal places**, even if the original number has more.
 
 
-> [!NOTE]
-> ### Why does `round(2.225, 2)` sometimes return `2.22` instead of `2.23`?
->
-> You might expect:
->
-> ```python
-> round(2.225, 2)
-> ```
->
-> Output:
->
-> ```text
-> 2.23
-> ```
->
-> However, Python often returns:
->
-> ```text
-> 2.22
-> ```
->
-> While:
->
-> ```python
-> round(2.235, 2)
-> ```
->
-> returns:
->
-> ```text
-> 2.23
-> ```
->
-> This **does not mean `round()` is broken**.
->
-> The reason is that computers store decimal numbers using **binary (base-2)**, not decimal (base-10). Many decimal values, such as `2.225`, **cannot be represented exactly in binary**. Instead, Python stores the closest possible binary approximation.
->
-> So, when `round()` performs the rounding, it rounds the value that is **actually stored in memory**, which may be slightly smaller or larger than the decimal number you typed.
->
-> This behavior is called **floating-point precision** and is a normal characteristic of almost every programming language, not just Python.
->
-> **Don't worry if this feels confusing right now.** Once you learn about binary numbers and floating-point representation, this behavior will make complete sense.
+<div style="border: 2px solid #444; border-radius: 8px; padding: 20px 24px; background-color: #f8f8f8;">
+
+### Why does `round(2.225, 2)` sometimes return `2.22` instead of `2.23`?
+
+You might expect:
+
+```python
+round(2.225, 2)
+```
+
+Output:
 
 ```text
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                     Floating-Point Precision in Python                      │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ You might expect:                                                           │
-│                                                                             │
-│   round(2.225, 2)  →  2.23                                                  │
-│                                                                             │
-│ However, Python often returns:                                              │
-│                                                                             │
-│   round(2.225, 2)  →  2.22                                                  │
-│   round(2.235, 2)  →  2.23                                                  │
-│                                                                             │
-│ This does NOT mean round() is broken.                                       │
-│                                                                             │
-│ Computers store decimal numbers in binary (base-2), not decimal (base-10). │
-│ Some decimal values, such as 2.225, cannot be represented exactly in        │
-│ binary. Instead, Python stores the closest possible binary approximation.   │
-│                                                                             │
-│ Imagine the computer stores something conceptually similar to:              │
-│                                                                             │
-│                    2.224999999999...                                        │
-│                                                                             │
-│ (This is only an example, not the exact stored value.)                      │
-│                                                                             │
-│ Python rounds the value that is actually stored in memory, not the decimal  │
-│ number you typed. Since the stored value is slightly closer to 2.22 than    │
-│ 2.23, the result becomes 2.22.                                              │
-│                                                                             │
-│ Flow of Events                                                              │
-│                                                                             │
-│  You type                                                                   │
-│      2.225                                                                  │
-│        │                                                                    │
-│        ▼                                                                    │
-│  Computer stores the closest                                                │
-│  binary approximation                                                       │
-│        │                                                                    │
-│        ▼                                                                    │
-│  Example approximation                                                      │
-│  2.224999999999...                                                          │
-│        │                                                                    │
-│        ▼                                                                    │
-│  Python rounds the stored value                                             │
-│        │                                                                    │
-│        ▼                                                                    │
-│      Result                                                                 │
-│       2.22                                                                  │
-│                                                                             │
-│ This behavior is called Floating-Point Precision and exists in almost every │
-│ programming language, not just Python.                                      │
-└─────────────────────────────────────────────────────────────────────────────┘
+2.23
 ```
+
+However, Python often returns:
+
+```text
+2.22
+```
+
+While:
+
+```python
+round(2.235, 2)
+```
+
+returns:
+
+```text
+2.23
+```
+
+**This does not mean `round()` is broken.**
+
+The reason is that computers store decimal numbers using **binary (base-2)**, not decimal (base-10). Many decimal values, such as `2.225`, **cannot be represented exactly in binary**. Instead, Python stores the closest possible binary approximation.
+
+So, when `round()` performs the rounding, it rounds the value that is **actually stored in memory**, which may be slightly smaller or larger than the decimal number you typed.
+
+Imagine the computer stores something conceptually similar to:
+
+```text
+2.224999999999...
+```
+
+*(This is only an example, not the exact stored value.)*
+
+Since the stored value is slightly closer to `2.22` than `2.23`, the result becomes `2.22`.
+
+---
+
+**Flow of Events**
+
+```
+You type
+   2.225
+     │
+     ▼
+Computer stores the closest binary approximation
+     │
+     ▼
+Example approximation
+2.224999999999...
+     │
+     ▼
+Python rounds the stored value
+     │
+     ▼
+   Result
+   2.22
+```
+
+This behavior is called **floating-point precision** and is a normal characteristic of almost every programming language, not just Python.
+
+**Don't worry if this feels confusing right now.** Once you learn about binary numbers and floating-point representation, this behavior will make complete sense.
+
+</div>
