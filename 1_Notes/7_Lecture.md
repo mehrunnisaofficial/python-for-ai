@@ -669,3 +669,5 @@ SubStack: [The Epoch](https://theepoch.substack.com/)
 YouTube: [@mehrunnisa.ai](https://www.youtube.com/@Mehrunnisa-ai)
 
 Thank you for respecting the time and effort that went into creating these notes. Happy learning! ♡
+
+Love You all!!!
