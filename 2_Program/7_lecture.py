@@ -1,37 +1,26 @@
 # Exception Handling
 
 # Syntax Error
-
 # Example:
 # print("Hello World!)
 
-# ValueError
 
+# ValueError
 # A ValueError happens when the input cannot be converted
 # to the expected data type.
-
-# Example:
-
-num = int(input("Enter your number: "))
-print(f"Number is {num}")
-
-# If you enter a positive (+ve) integer, it will print.
-# If you enter a negative (-ve) integer, it will also print.
-# But if you enter something other than an integer, such as:
-# - float
-# - string
-# a ValueError will occur.
-
-# To handle a ValueError, we can use try-except.
-# It works somewhat like if-else.
+# try-except
+# Used to handle a ValueError.
 
 try:
     number = int(input("Please enter your number: "))
     print(f"Number is {number}")
-except:
-    print("You entered the wrong input. Please try again.")
 
-# Let's try the same thing using a for loop.
+except ValueError:
+    print("You entered an invalid number. Please try again.")
+
+
+# Using a for loop
+# I used a for loop to give the user 5 attempts.
 
 time_limit = 5
 count = 0
@@ -41,12 +30,18 @@ for _ in range(time_limit):
         number = int(input("Please enter your number: "))
         print(f"Number is {number}")
         break
+
     except ValueError:
         print("You entered an invalid number. Please try again.")
         count += 1
 
 if count >= 5:
-    print("You reached the time limit.\nTry again later.\nYou dumbhead Go study maths.")
+    print(
+        "You reached the time limit.\n"
+        "Try again later.\n"
+        "You dumbhead! Go study maths."
+    )
+
 
 # A more Pythonic way
 
@@ -57,15 +52,19 @@ for attempt in range(time_limit):
         number = int(input("Please enter your number: "))
         print(f"Number is {number}")
         break
+
     except ValueError:
         print("You are r")
-# else:
-    # print("You dumb head, you reached the time limit. Go and study numbers, STUPID!")
+
+else:
+    print("You dumb head, you reached the time limit. Go and study numbers, STUPID!")
 
 print(f"Number is {number}")
 
+
 # One cool thing in Python is that we can use else with
 # for and while loops. That's pretty amazing!
+
 
 # Scope in Python
 
@@ -79,52 +78,49 @@ print(f"Number is {number}")
 # Only functions (def), classes (class), and modules (.py files)
 # create a new local scope.
 
-# Example:
-
 if True:
     x = 10
 
 print(x)  # Output: 10
 
+
+
 # NameError
 
-# Sometimes you may get a NameError after a try-except block.
-
-# This does NOT happen because the variable is out of scope.
-
-# It happens because the variable was NEVER assigned.
+# A NameError can happen after a try-except block.
+# It happens when the variable was never assigned.
 
 # Example:
 
 try:
     number = int(input("Enter a number: "))
+
 except ValueError:
     print("Invalid input")
 
-print(number)
+# print(number)
+
 
 # If the user enters "hello":
-
-# 1. int("hello") raises a ValueError.
-# 2. Python immediately jumps to the except block.
-# 3. The assignment to 'number' never happens.
-# 4. Later, print(number) raises:
-#    NameError: name 'number' is not defined
-# 5. This happens because 'number' was never created,
-#    NOT because it is out of scope.
+# int("hello") raises a ValueError.
+# The assignment to 'number' never happens.
+# So, print(number) raises a NameError.
 
 
 # To solve this issue, we can use else.
 
 try:
     number = int(input("Please enter the number: "))
+
 except ValueError:
     print("Wrong, broo. You are really stupid.")
+
 else:
     # If the except block runs,
     # this block will never execute.
     print(f"Number is {number}")
 
+
 # Another way
 
 while True:
@@ -132,44 +128,211 @@ while True:
         number = int(input("Please enter your number: "))
         print(f"Number is {number}")
         break
+
     except ValueError:
         print("You entered an invalid number. Please try again.")
+
 
 # Another way
 
 while True:
     try:
         number = int(input("Please enter your number: "))
+
     except ValueError:
         print("You entered an invalid number. Please try again.")
+
     else:
         break
 
 print(f"Number is {number}")
 
+
 # Another way
 
 while True:
     try:
         number = int(input("Please enter your number: "))
         break
+
     except ValueError:
         print("You entered an invalid number. Please try again.")
 
 print(f"Number is {number}")
+
 
 # Another way
 
 while True:
     try:
         number = int(input("Please enter your number: "))
+
     except ValueError:
         print("You entered an invalid number. Please try again.")
+
     else:
         print(f"Number is {number}")
         break
 
-# Lecture Reference:
-# https://youtu.be/nLRL_NcnK-4?t=16649
 
-# Is not completed yet
+# try-except with function
+
+
+# Function without any argument
+
+
+# Option 1
+
+def main():
+    while True:
+        try:
+            user_input = input("Enter the number: ")
+            x = int(user_input)
+
+        except ValueError:
+            print(f"{user_input} is not an integer")
+
+        else:
+            return x
+
+
+# Option 2
+
+def main():
+    while True:
+        try:
+            user_input = input("Enter the number: ")
+            x = int(user_input)
+
+        except ValueError:
+            print(f"{user_input} is not an integer")
+
+        else:
+            break
+
+    return x
+
+
+# I mostly like Option 1 because it looks clean
+# and has fewer steps than Option 2.
+
+# Option 1 is more compact.
+
+
+# Option 3
+
+def main():
+    while True:
+        try:
+            user_input = input("Enter the number: ")
+            x = int(user_input)
+            return x
+
+        except ValueError:
+            print(f"{user_input} is not an integer")
+
+
+main()
+
+
+# Remember: try and except are statements.
+# People might get confused and think they are functions.
+# Even I myself thought they were functions.
+
+
+# A statement becomes a function when it holds ()
+# in its syntax.
+
+
+def main():
+    number = get_num()
+    print(f"{number} is an integer")
+
+
+def get_num():
+    while True:
+        try:
+            user_input = input("Enter the number: ")
+            x = int(user_input)
+            return x
+
+        except ValueError:
+            print(f"{user_input} is not an integer")
+
+
+main()
+
+
+# There is another keyword called pass.
+
+# It literally means pass, so it just helps to move on.
+# We can use it with except.
+
+
+def main():
+    number = get_num()
+    print(f"{number} is an integer")
+
+
+def get_num():
+    while True:
+        try:
+            user_input = input("Enter the number: ")
+            x = int(user_input)
+            return x
+
+        except ValueError:
+            pass
+
+
+main()
+
+
+# Now, every time you write a wrong answer in the input,
+# it will pass and then ask again and again.
+
+
+# What is indentation?
+
+# See, in C++, which I learned earlier,
+# to make every block look clear and clean,
+# we generally used {}.
+
+# I think that is a clean way to separate
+# loops, else, functions, etc.
+
+# But here in Python, there is no such thing.
+
+# That's why I think indentation is needed
+# to make things look cleaner.
+
+# Here, indentation now becomes part of the coding syntax.
+            
+
+
+def main():
+    number = get_num("Write an integer: ")
+    print(f"{number} is an integer")
+
+
+def get_num(prompt):
+    while True:
+        try:
+            user_input = input(prompt)
+            x = int(user_input)
+            return x
+
+        except ValueError:
+            pass
+
+
+main()
+
+
+# We can make it more general and more user- and coder-friendly.
+
+
+# Now the chapter ends here:
+# https://youtu.be/nLRL_NcnK-4?t=17478
+
+# See you next time. Until then, bye-bye and take care!
