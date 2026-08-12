@@ -1,55 +1,60 @@
-# Libraries
+# # Libraries
 
-# It's literally 11:08 pm, I badly wanna sleep but I don't wanna break my streak
-# so let's start learning
+# # It's literally 11:08 pm, I badly wanna sleep but I don't wanna break my streak
+# # so let's start learning
 
-import random
-
-
-# Coin flipping game
-
-coin = random.choice(["Heads", "Tails"])
-print(coin)
+# import random
 
 
-# Or an easier way
+# # Coin flipping game
 
-from random import choice
-
-gender = choice(["Boy", "Girl"])
-print(gender)
-
-# another way 
-
-idk = random.choice(["You", "Me"])
-print(idk)
+# coin = random.choice(["Heads", "Tails"])
+# print(coin)
 
 
-# Random number
+# # Or an easier way
 
-num_choose = random.randint(1, 100)
-print(num_choose)
+# from random import choice
+
+# gender = choice(["Boy", "Girl"])
+# print(gender)
+
+# # another way 
+
+# idk = random.choice(["You", "Me"])
+# print(idk)
 
 
-# Random cards
+# # Random number
 
-cards = [
-    "Ace",
-    "King",
-    "Queen",
-    "Jack",
-    "10",
-    "9",
-    "8",
-    "7",
-    "6",
-    "5"
-]
+# num_choose = random.randint(1, 100)
+# print(num_choose)
 
-random.shuffle(cards)
 
-for card in cards:
-    print(card)
+# # Random cards
+
+# cards = [
+#     "Ace",
+#     "King",
+#     "Queen",
+#     "Jack",
+#     "10",
+#     "9",
+#     "8",
+#     "7",
+#     "6",
+#     "5"
+# ]
+
+# random.shuffle(cards)
+
+# for card in cards:
+#     print(card)
+
+
+# import statistics
+# mean = statistics.mean([100, 90, 93, 45])
+# print(mean)
 
 
 # That's it for today.
@@ -87,3 +92,24 @@ for card in cards:
 #
 # But `choice` itself can still be overwritten by another
 # identifier with the same name.
+
+# https://youtu.be/nLRL_NcnK-4?t=18470
+
+
+# studied today
+# - import statistics
+# - command line arguments
+
+
+
+import sys
+
+# print("Hello, My name is", sys.argv[1])
+
+# another way is that we can save it too
+
+name = " ".join(sys.argv[1:])
+# this means join everythng after 1
+print("Hello, My name is", name)
+
+print("My name is Pagal")
