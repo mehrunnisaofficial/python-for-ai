@@ -1,60 +1,114 @@
-# # Libraries
+# Libraries
 
-# # It's literally 11:08 pm, I badly wanna sleep but I don't wanna break my streak
-# # so let's start learning
+# heads and tails game
 
-# import random
+import random
+print("\nHead and Tails Game")
+coin = ["Heads", "Tails"]
+chance = random.choice(coin)
 
-
-# # Coin flipping game
-
-# coin = random.choice(["Heads", "Tails"])
-# print(coin)
+print(chance)
 
 
-# # Or an easier way
+# who will become the theif
 
-# from random import choice
+print("\nWho is the theif Game")
+theif = random.choice(["Iram", "Iqra", "Huzaifa", "Afshan"])
 
-# gender = choice(["Boy", "Girl"])
-# print(gender)
+print(theif)
 
-# # another way 
+# using shuffle to actually shuffle
+# making card shuffling game
 
-# idk = random.choice(["You", "Me"])
-# print(idk)
+print("\nCards Shuffling Game")
+cards = ["Jack", "King", "Queen", "3", "7"]
+random.shuffle(cards)
 
-
-# # Random number
-
-# num_choose = random.randint(1, 100)
-# print(num_choose)
-
-
-# # Random cards
-
-# cards = [
-#     "Ace",
-#     "King",
-#     "Queen",
-#     "Jack",
-#     "10",
-#     "9",
-#     "8",
-#     "7",
-#     "6",
-#     "5"
-# ]
-
-# random.shuffle(cards)
-
-# for card in cards:
-#     print(card)
+for card in cards:
+    print(card)
 
 
-# import statistics
-# mean = statistics.mean([100, 90, 93, 45])
-# print(mean)
+# rather than using "import random" we can use from keyword too
+
+from random import choice
+print("\nNew way to Import and show")
+who = ["Noor", "Afshan", "Huzaifa"]
+print(f"{choice(who)}")
+
+# taking out mean
+
+import statistics
+
+print("\nUsing Statistics")
+my_list = [1,12,345,1,1,3,1,3,3,3]
+average = statistics.mean([1,12,345,1,1,3,1,3,3,3,4,555])
+
+print(f"Mean = {average:,.2f}")
+print(f"Median = {statistics.median([1,12,345,1,1,3,1,3,3,3,567]):,.2f}")
+
+print(my_list)
+print(f"Mode = {statistics.mode(my_list)}")
+print(
+    f"Multiple Mode = "
+    f"{statistics.multimode(my_list)}"
+)
+
+
+# # choose between 1 - n number game
+
+print("\nChoose Random Number Game")
+number = random.randint(1,1000)
+print(f"Random Number = {number}")
+    
+
+
+# studied till https://youtu.be/nLRL_NcnK-4?t=18766
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # That's it for today.
@@ -93,23 +147,9 @@
 # But `choice` itself can still be overwritten by another
 # identifier with the same name.
 
-# https://youtu.be/nLRL_NcnK-4?t=18470
-
-
-# studied today
-# - import statistics
-# - command line arguments
 
 
 
-import sys
 
-# print("Hello, My name is", sys.argv[1])
 
-# another way is that we can save it too
 
-name = " ".join(sys.argv[1:])
-# this means join everythng after 1
-print("Hello, My name is", name)
-
-print("My name is Pagal")
