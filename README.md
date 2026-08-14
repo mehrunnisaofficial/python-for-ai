@@ -1,6 +1,14 @@
-# Python for AI
+<div align="center">
 
-A complete guide to learning Python for AI Engineering through detailed notes, hands-on projects, practical examples, and real-world applications.  
+<img src="https://readme-typing-svg.demolab.com?font=Bodoni+Moda&weight=700&size=50&duration=2200&pause=800&color=E1DCC9&center=true&vCenter=true&width=1100&height=100&lines=Python+for+AI" alt="Python for AI"/>
+
+<br>
+
+<sub>
+<i>A complete guide to learning Python for AI Engineering through detailed notes, hands-on projects, practical examples, and real-world applications.</i>
+</sub>
+
+</div>
 
 
 ---
