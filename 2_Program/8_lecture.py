@@ -1,4 +1,4 @@
-# Libraries
+# Libraries - Modules
 
 # heads and tails game
 
@@ -54,7 +54,7 @@ print(
 )
 
 
-# # choose between 1 - n number game
+# choose between 1 - n number game
 
 print("\nChoose Random Number Game")
 number = random.randint(1,1000)
@@ -62,54 +62,76 @@ print(f"Random Number = {number}")
     
 
 
-# studied till https://youtu.be/nLRL_NcnK-4?t=18766
+# command line argument
+
+import sys
+
+# sys.argv[0] = python file_name.py
+# if u dont give any extra string here than u will get IndexError
+
+
+print(f"Hello, My name is {sys.argv[1]}")
+print(f"Hello, My name is {sys.argv[1:]}")    # print all string after 0th index
+print(f"Hello, My name is {sys.argv[1:3]}")   # print all string after 0th index to 3rd index
+
+
+# To not get index error we can use 
+import sys
+try:
+    print(f"Hello, My name is {sys.argv[1]}")
+except IndexError:
+    print("\nBroo write your name atleast\n")
+
+
+# we can handle the error in another way
+import sys
+if len(sys.argv) < 2:
+    print("Too few argument")
+elif len(sys.argv) > 2:                  # we can skip elif if u don't want the user will give too many argumnets
+    print("Too many argument")
+else:
+    print(f"Hello, My name is {sys.argv[1]}")
 
 
 
+# using for loop to print print(f"Hello, My name is {sys.argv[1:3]}") 
+import sys
+for argument in sys.argv[1:]:
+    print(argument, end = " ")
+    print(f"{argument}", end = " ")
+
+
+# another way
+# we will give in command line 
+# python 8_lecture.py "Mehrunnisa Baby"
+
+import sys
+print(f"Hello, My name is {sys.argv[1]}")
+
+# output : Identify yourself (๑ᵔ⤙ᵔ๑)
+
+# another funciton in sys
+# sys.exit() = “Aight, I’m out 🫡” → immediately stops the Python program.
+
+import sys
+print("Hello")
+sys.exit()
+print("This will never print")
+
+# won't give any error check out by yourself
+
+import sys
+if len(sys.argv) < 2:
+    sys.exit("Too few argument")
+elif len(sys.argv) > 2:                  
+    sys.exit("Too many argument")
+
+
+print(f"Hello, My name is {sys.argv[1:-1]}")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# studied till https://youtu.be/nLRL_NcnK-4?t=20200
 
 # That's it for today.
 # I am really tired.
@@ -146,10 +168,39 @@ print(f"Random Number = {number}")
 #
 # But `choice` itself can still be overwritten by another
 # identifier with the same name.
+ 
+# A command-line argument is extra information you provide 
+# when running the program in the terminal.
 
+# sys is a Python module that provides access to 
+# various things related to the Python interpreter and system.
 
+# Python receives the command-line arguments, 
+# and the sys module gives your Python program access to them.
 
+"""
+Command-line arguments are the extra arguments we 
+give when running a program through the terminal.
 
+sys is a Python module through which the Python 
+program can access those command-line arguments.
 
+Those arguments are available in a list called argv, 
+which we access as sys.argv
+
+So:
+
+Terminal
+   │
+   │  python program.py hello 123
+   ↓
+Python receives the arguments
+   │
+   ↓
+sys.argv
+   │
+   ↓
+['program.py', 'hello', '123']
+"""
 
 
