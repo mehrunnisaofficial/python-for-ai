@@ -7,12 +7,14 @@
 # # input() always returns a string.
 # #
 # # Example:
-# # num1 = input("10")
-# # num2 = input("20")
-# #
-# # num1 + num2
-# # Output:
-# # "1020"
+
+num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+
+num = num1 + num2
+
+print("RESULT:", num)
+
 # #
 # # This happens because Python joins two strings instead of
 # # adding two numbers.
@@ -172,20 +174,20 @@
 
 
 # this is just formatting in the string so its not permanent
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+# num1 = float(input("Enter the first number: "))
+# num2 = float(input("Enter the second number: "))
 
-result = num1 / num2
-print(f"The Result is ( after round off ): {result:.2f}")
-print(f"The Result is ( after round off ): {result}")
+# result = num1 / num2
+# print(f"The Result is ( after round off ): {result:.2f}")
+# print(f"The Result is ( after round off ): {result}")
 
-# but this one is permanent
+# # but this one is permanent
 
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+# num1 = float(input("Enter the first number: "))
+# num2 = float(input("Enter the second number: "))
 
-result = round(num1 / num2, 2)
-print("The Result is ( after round off ): ", result)
+# result = round(num1 / num2, 2)
+# print("The Result is ( after round off ): ", result)
 
 
 # # ============================================================
