@@ -156,18 +156,7 @@ print(f"Hello, My name is {sys.argv[1:-1]}")
 
 # Bro, you don't have to install it.
 # It already comes with Python. You just have to import it.
-
-# I don't know, but I like the first version better because
-# it looks more aesthetic, cleaner, and readable.
-#
-# `from random import choice` imports `choice` directly,
-# so we don't need to use the module name `random`.
-#
-# Therefore, an identifier named `random` won't conflict
-# with the imported `choice` function.
-#
-# But `choice` itself can still be overwritten by another
-# identifier with the same name.
+  
  
 # A command-line argument is extra information you provide 
 # when running the program in the terminal.
