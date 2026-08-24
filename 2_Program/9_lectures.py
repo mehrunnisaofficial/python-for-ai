@@ -10,21 +10,25 @@
 # or u can run pip install cowsay both works fine 
 
 
-# import cowsay
-# import sys
-# cowsay.cow("Hello!, My name is Cow and I am a duck")
+import cowsay
+import sys
+cowsay.cow("Hello!, My name is Cow and I am a duck")
 
-# if len(sys.argv) == 2:
-#     cowsay.cow(f"Hello, {sys.argv[1]}")           # or u can cowsay.cow("Hello, "+ sys.argv[1])
+if len(sys.argv) == 2:
+    cowsay.cow(f"Hello, {sys.argv[1]}")           # or u can cowsay.cow("Hello, "+ sys.argv[1])
 
 
-# cowsay.cow("Hello!")
-# cowsay.trex("ROAAAAR!")
-# cowsay.dragon("Hello, human!")
-# cowsay.tux("Linux!")
-# cowsay.kitty("Meow")
-# cowsay.ghostbusters("HeLOO~~~~OO")
-# cowsay.turkey("Hello I am from Turkey")
+cowsay.cow("Hello!")
+cowsay.trex("ROAAAAR!")
+cowsay.dragon("Hello, human!")
+cowsay.tux("Linux!")
+cowsay.kitty("Meow")
+cowsay.ghostbusters("HeLOO~~~~OO")
+cowsay.turkey("Hello I am from Turkey")
+
+
+
+# #---------------------------------------------------------
 
 import requests
 # import json
@@ -53,41 +57,93 @@ print(f"Height : {pokemon_info["height"]}")
 print(f"Weight : {pokemon_info["weight"]}")
 print(f"ID : {pokemon_info["id"]}")
 
-# Studied Till : https://youtu.be/nLRL_NcnK-4?t=21289
+#---------------------------------------------------------------
+
+import requests
+# import json
+
+base_url = "https://v2.jokeapi.dev"
 
 
+def get_joke(joke_id, category):
+    url = f"{base_url}/joke/{category}?idRange={joke_id}"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        print(f"Accessed {response.status_code}")
+        joke_data = response.json()
+        #print(json.dumps(joke_data, indent = 2))
+        return joke_data
+    else:
+        print(f"Failed to access {response.status_code}")
+
+joke_id = int(input("Please enter joke id: "))
+category = input("Category of joke: ")
+joke_info = get_joke(joke_id, category)
+
+print(f"\nJOKE\n")
+
+if joke_info["type"] == "twopart":
+    print(joke_info["setup"])
+    print(joke_info["delivery"])
+else:
+    print(joke_info["joke"])
+
+#-----------------------------------
 
 
+# import request to use it and this code only ask category rather than ID 
+import requests
+
+base_url = "https://v2.jokeapi.dev"
 
 
+def get_joke(category):
+    url = f"{base_url}/joke/{category}"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        print(f"Accessed {response.status_code}")
+        joke_data = response.json()
+        return joke_data
+    else:
+        print(f"Failed to access {response.status_code}")
 
 
+category = input("Category of joke: ")
+joke_info = get_joke(category)
+
+print(f"\nJOKE\n")
+
+if joke_info["type"] == "twopart":
+    print(joke_info["setup"])
+    print(joke_info["delivery"])
+else:
+    print(joke_info["joke"])
+
+#---------------------------------------
+
+# using nasa API to get random data
+
+import requests
+
+base_url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+
+# Send the request and store the server's response inside response.
+response = requests.get(base_url)            # here response is a variable which holds the response objects
+
+# status_code is an attribute of the Response object that tells you whether the request worked and what happened.
+print(response.status_code)
+
+data = response.json()
+
+print(data["title"])
+print(data["date"])
+print(data["explanation"])
+print(data["url"])
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# check out more status code here : https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 
 
 
@@ -119,3 +175,22 @@ print(f"ID : {pokemon_info["id"]}")
 #  ├── kitty()           ← function
 #  ├── ghostbusters()    ← function
 #  └── turkey()          ← function
+
+
+# now what is json 
+
+# JSON (JavaScript Object Notation) → A common format used 
+# to store and exchange structured data between programs.
+# APIs commonly use JSON to send and receive data.
+# response.json() → Converts the JSON 
+# response into Python data, usually a dictionary or list.
+"""
+Remember this difference
+response.json()
+Converts the JSON response into a Python dictionary/list 
+that you can work with.
+
+json.dumps(data, indent=2)
+Converts a Python dictionary/list into a formatted 
+JSON string, mainly useful when you want to display it nicely.
+"""
