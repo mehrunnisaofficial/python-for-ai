@@ -120,6 +120,8 @@ else:
     # this block will never execute.
     print(f"Number is {number}")
 
+    # this block will only run when if is correct
+
 
 # Another way
 
