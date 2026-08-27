@@ -65,3 +65,9 @@ def get_player_guess():
 
 
 main()
+
+
+
+# Things i need to add in this 
+# -> If user give answer which is greater (or less) than computer guess 
+#    it should return too high ( or too low )
