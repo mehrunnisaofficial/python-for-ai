@@ -41,9 +41,6 @@ def main():
             print(f"      {statistic}: {value}")
 
 
-
-
-
 def total_num_students():
     while True:
         try:
@@ -57,16 +54,21 @@ def total_num_students():
         except ValueError:
             print("Please Enter a number")
 
+
 def get_students(number):
     students = []
+
     for i in range(number):
-        name = input(f"Enter Student {i + 1} Name: ").strip().title()
-        if name.replace(" ", "").isalpha():
-            students.append(name)
-        else:
+        while True:
+            name = input(f"Enter Student {i + 1} Name: ").strip().title()
+            if name.replace(" ", "").isalpha():
+                students.append(name)
+                break
+
             print("Please enter correct name")
 
     return students
+
 
 def total_num_subjects():
     while True:
@@ -77,21 +79,26 @@ def total_num_subjects():
                 return num
 
             print("Invalid Quantity")
+
         except ValueError:
             print("Please Enter a number")
+
 
 def get_subjects(number):
     subjects = []
 
     for i in range(number):
-        name = input(f"Enter Subject {i + 1} Name: ").strip().title()
+        while True:
+            name = input(f"Enter Subject {i + 1} Name: ").strip().title()
 
-        if name.replace(" ", "").isalpha():
-            subjects.append(name)
-        else:
+            if name.replace(" ", "").isalpha():
+                subjects.append(name)
+                break
+
             print("Please enter correct name")
 
     return subjects
+
     
 def get_subjects_marks(subjects):
     # is a list
@@ -106,19 +113,18 @@ def get_subjects_marks(subjects):
                 if 1 <= marks <= 100:
                     marks_database[sub] = marks
                     break
-                else:
-                    print("Invalid Marks!!!\nRE-ENTER")
+                
+                print("Invalid Marks!!!\nRE-ENTER")
 
             except ValueError:
                 print("Please Enter a number")
 
     return marks_database        
 
-def get_statistics():
-    marks_copy_database = get_subjects_marks()
-    # mcd = {"subject 1" = 23, "subject 2" = 34}
 
-    mark_values = list(marks_copy_database.values())
+def get_statistics(marks_database):
+
+    mark_values = list(marks_database.values())
 
     mean = statistics.mean(mark_values)
     median = statistics.median(mark_values)
@@ -139,9 +145,11 @@ main()
 
 """
 
-stuedent name = [student 1, student 2]
+stuedent name = [student 1, student 2...]
 
 using zip
+
+students_database = [{subject marks}, {subject stats}]
 stduents = 
 [
 student 1 -> [{subject 1 = 100, subject 2 = 99}, {mode = 23, mean, 34, median, 45}]

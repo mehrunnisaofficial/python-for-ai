@@ -5,24 +5,24 @@ from statistics import multimode
 
 def main():
     # combining
+    database = {}
 
     number = get_total_years()
     print(f"The total number of Years is {number}")
 
-    years_data, manager_data = get_data(number)
-     
+    years_data = get_data(number)
+    manager_data = get_managers(number)
 
-    print("\n      SHOWING DATA      \n")
+    print("\n-----SHOWING DATA-----\n")
     for year, data in years_data.items():
         print(f"{year} -> {data}")
 
-    print("\n      SHOWING DATA UNDER WHICH MANAGER DATA GOT LEAKED SAME      \n")
+    print("\n-----SHOWING DATA UNDER WHICH MANAGER DATA GOT LEAKED SAME-----\n")
     leak_database = calc_leak(years_data)
     
     for manager, (year, data) in zip(manager_data, years_data.items()):
-        print(f"    {manager}")
         if year in leak_database:
-            print(f"      {year} : {data}")
+            print(f"{manager} \n-> {year} : {data}")
 
 def get_total_years():
     while True:
@@ -36,43 +36,37 @@ def get_total_years():
         except ValueError:
             print("Please Enter Correct Number of Years")
 
-def get_managers():
-    while True:
-        name = input("Enter the Manager name: ").strip().capitalize()
+def get_managers(number):
+    manager_list = []
+    for i in range(number):
+        while True:
+            name = input("Enter the Manager name: ").strip().capitalize()
 
-        if name.replace(" ", "").isalpha():
-            return name
-           
+            if name.replace(" ", "").isalpha():
+                manager_list.append(name)
+                break
 
-        print("Please enter correct manager name!!!")
+            print("Please enter correct manager name!!!")
+
+    return manager_list
 
 
 def get_data(number):
+
     database = {}
-    manager_list = []
-    print("\n             ENTER THE REQUIRED DATA            \n")
     for i in range(number):
-        #                      YEARS INPUT
         while True:
             taking_years = input("Enter the Year: ").strip()
 
             if taking_years.isdigit() and len(taking_years) == 4:
                 years = int(taking_years)
-
                 if 1970 <= years <= 2030:
-
-                    if years in database:
-                        print("This year has already been entered. Please enter another year.")
-                        continue
                     break
-
                 print("Please Enter correct range")
-
             else:
                 print("Please Enter correct Year")
-        
 
-       #                      DATA INPUT
+       
         while True:
             try:
                 data = int(input("Enter the data: "))
@@ -85,21 +79,23 @@ def get_data(number):
             except ValueError:
                 print("Data is wrong")
 
-        #                      MANAGER INPUT        
         manager = get_managers()
-        manager_list.append(manager)
-        print("\n")
 
-    return database, manager_list
+        
+
+    return database
 
 
-def calc_leak(years_data):
-    datas = list(years_data.values())
+
+
+
+def calc_leak(yearsdata):
+    datas = list(yearsdata.values())
     leaks = multimode(datas)
 
     leak = {}
 
-    for year, data in years_data.items():           # here year means keys and data means its values in dictionary
+    for year, data in yearsdata.items():           # here year means keys and data means its values in dictionary
         if data in leaks:           # if values are in leaks list
             leak[year] = data       # add that that data in leak dictionary
 
@@ -126,7 +122,3 @@ databse = {
         }
 """
 
-
-# things i need to solve in this code 
-#   -> chnage variable naming
-#   -> alignment
