@@ -45,16 +45,16 @@
 #        ASK THE USER FOR A POSITIVE NUMBER
 # =====================================================
 
-# i = int(input("Enter a positive number: "))
-#
-# while i <= 0:
-#     if i <= 0:
-#         i = int(input("Enter a positive number: "))
-#         break
-#
-# if i > 0:
-#     for j in range(i):
-#         print("Meow")
+i = int(input("Enter a positive number: "))
+
+while True:
+    if i <= 0:
+        i = int(input("Enter a positive number: "))
+        break
+
+if i > 0:
+    for j in range(i):
+        print("Meow")
 
 
 # =====================================================
@@ -160,60 +160,3 @@ So yes, this program still works! 🎉
 #
 #
 # main()
-
-
-# =====================================================
-#                  SAME CODE AGAIN
-# =====================================================
-
-# def main():
-#     number = get_number()
-#     print_Meow(number)
-#
-#
-# def get_number():
-#     while True:
-#         i = int(input("Enter the number: "))
-#
-#         if i > 0:
-#             return i
-#
-#
-# def print_Meow(n):
-#     for i in range(n):
-#         print("Meow")
-#
-#
-# main()
-
-
-# =====================================================
-#                  HARRY POTTER
-# =====================================================
-
-# student = ["Harmioni", "Harry", "Ron"]
-
-# for i in range(3):
-#     print(student[i])
-
-
-# Another Pythonic way
-
-# for stud in student:
-#     print(stud)
-
-
-# =====================================================
-#                ANOTHER WAY
-# =====================================================
-
-# student = ["Harmioni", "Harry", "Ron"]
-#
-# for i in range(len(student)):
-#     print(i + 1, ":", student[i], end="\n")
-
-
-
-
-
-

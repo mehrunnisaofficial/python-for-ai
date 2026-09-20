@@ -3,16 +3,16 @@
 # we need to first create the structure
 
 def main():
-    # name = input("Enter your name: ")
     hello("world")
-    goodbye("world")
+    goodbye("World")
+
 
 def hello(name):
-    print(f"Hello, {name}")
+    print(f"hello {name}")
 
 def goodbye(name):
-    print(f"Goodbye, {name}")
+    print(f"Goodbye {name}")
+
 
 if __name__ == "__main__":
     main()
-
