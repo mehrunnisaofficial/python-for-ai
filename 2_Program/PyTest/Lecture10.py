@@ -4,6 +4,7 @@
 # Unit test is a part of code which u write to check whether
 # the created solution is correct or not
 # so u write a program to check your actual program is correct or not
+# A unit test tests one small, independent piece of your program.
 
 
 # Creating Module
@@ -13,7 +14,7 @@ def main():
     print(f"Square of {x} = {square(x)}")
 
 def square(a):
-    return a + a
+    return a * a
 
 if __name__ == "__main__":
     main()
