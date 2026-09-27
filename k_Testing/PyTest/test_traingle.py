@@ -1,4 +1,4 @@
-from traingle import tri  #ik triangle spelling is wrong
+from k_Testing.PyTest.traingle import tri  #ik triangle spelling is wrong
 
 
 # This is called Entity Comparison

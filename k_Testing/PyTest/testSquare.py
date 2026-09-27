@@ -1,6 +1,6 @@
 # Lecture link: https://youtu.be/nLRL_NcnK-4?t=22172
 
-from Lecture10 import square
+from k_Testing.PyTest.Square import square
 
 def main():
     test_square1()

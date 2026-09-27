@@ -16,7 +16,10 @@ def test_compare_fruits():
 
 # NOTES
 # to run the specific test in the test file we will write specific command
-# python -m pytest 2_Program\Unit_test\fruits.py
+# python -m pytest 2_Program\Pytest\fruits.py
+# like after writing pytest or python -m pytest u can write specific file path or
+# in which folder it is
+# and than when u ran it it will run that specific file
 # otherwise python will execute all test inside the folder
 # The test_ filename tells pytest to inspect this file for tests, and test_ 
 # functions tell pytest which functions inside that file are tests.

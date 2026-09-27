@@ -3,7 +3,7 @@
 # To install pytest we need to write this line in terminal
 # python -m pip install pytest
 
-from Lecture10 import square
+from k_Testing.PyTest.Square import square
 
 def test_square4():
     assert square(2) == 4
