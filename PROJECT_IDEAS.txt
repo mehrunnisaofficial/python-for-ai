@@ -1,0 +1,1195 @@
+YES. And honestly, this is a **very important transition** for you. 😭🐍
+
+You already have enough CS50P knowledge to stop living in the “give me a project idea → give me the code → explain the code” loop.
+
+You want to develop the programming equivalent of **writing your own novel plots**. That is absolutely a skill you can train.
+
+### First: where you are right now
+
+You've covered:
+
+* ✅ Functions & variables
+* ✅ Conditionals
+* ✅ Loops
+* ✅ Exceptions
+* ✅ Libraries
+* ✅ Unit tests
+* 🟡 File I/O, almost done
+* ⏳ Regular expressions
+* ⏳ OOP
+* ⏳ Et Cetera
+
+That is already enough for **real beginner Python projects**.
+
+And I would actually *not* recommend waiting until CS50P is completely finished.
+
+---
+
+# 🧠 The big change: stop looking for "project ideas"
+
+When you ask me:
+
+> "Give me a Python project."
+
+your brain gets the **interesting part** for free.
+
+You get the problem.
+You get the constraints.
+You get the feature list.
+You get the direction.
+
+Then your brain mostly does:
+
+> "Okay, how do I implement this?"
+
+That's useful for learning syntax, but it doesn't train **project discovery**.
+
+What you want is:
+
+> **"I have a problem. I wonder if Python could solve it."**
+
+That's a completely different muscle.
+
+Think about your novel-writing process.
+
+You probably don't sit there thinking:
+
+> "Please give me 17 novel ideas involving a girl, a mysterious house, and a morally ambiguous cat."
+
+😂
+
+Something probably sparks an idea.
+
+Programming can work exactly like that.
+
+---
+
+# 🔥 Your new rule
+
+For your next few projects:
+
+### **I am NOT going to give you the project idea.**
+
+Instead, I'll help you **develop your idea** once *you* have one.
+
+For example, you tell me:
+
+> "I noticed I keep forgetting which books I've read."
+
+Then I can ask:
+
+* What information should it store?
+* What should the user be able to do?
+* What happens if they enter something invalid?
+* What should the output look like?
+* What data structure makes sense?
+
+But **you decide what you're building.**
+
+That's the programming equivalent of you creating the plot yourself.
+
+---
+
+# 🧪 Start with "annoyances"
+
+This is probably the easiest way to develop the habit.
+
+For the next **7 days**, keep a little file:
+
+```text
+PROJECT_IDEAS.txt
+```
+
+Whenever you notice something annoying, repetitive, boring, or interesting, write it down.
+
+Not:
+
+> "Python calculator"
+
+Instead:
+
+> "I keep doing X manually."
+
+> "I wish I could automatically check X."
+
+> "I wonder how X works."
+
+> "It would be cool if I could turn X into Y."
+
+> "I have a folder full of X and it's annoying to manage."
+
+That's your raw material.
+
+---
+
+# 🕵️ Example
+
+Suppose you notice:
+
+> "My Downloads folder is disgusting."
+
+Don't immediately Google:
+
+**"Python file organizer project GitHub"**
+
+Instead ask yourself:
+
+### What is the problem?
+
+My Downloads folder contains:
+
+```text
+photo.png
+resume.pdf
+song.mp3
+notes.txt
+movie.mp4
+assignment.pdf
+```
+
+### What would I like?
+
+Maybe:
+
+```text
+Downloads/
+    Images/
+    PDFs/
+    Videos/
+    Music/
+    Text/
+```
+
+### What could Python do?
+
+Python can:
+
+* look at files
+* determine extensions
+* create folders
+* move files
+
+BOOM.
+
+You just discovered a project.
+
+And **you discovered it from your own life**, rather than from a project list.
+
+That's the habit you want.
+
+---
+
+# 🧩 Your "novelist → programmer" translation
+
+| Writing                       | Programming              |
+| ----------------------------- | ------------------------ |
+| Notice something interesting  | Notice a problem         |
+| Imagine a situation           | Define a problem         |
+| Create characters             | Define data              |
+| Decide what characters can do | Define features          |
+| Create conflict               | Handle errors/edge cases |
+| Build the plot                | Build program logic      |
+| Write scenes                  | Write functions          |
+| Edit the story                | Refactor/debug           |
+| Let someone read it           | Put project on GitHub    |
+
+And here's the beautiful part:
+
+### Your first projects are allowed to be terrible.
+
+Your first novel plot probably wasn't:
+
+> *War and Peace 2: Electric Boogaloo.*
+
+😂
+
+Same thing here.
+
+Your first independently-created Python project might be a 120-line CLI program that does something extremely mundane.
+
+**That's still a huge win.**
+
+Because the important thing isn't:
+
+> "Is this an impressive project?"
+
+It's:
+
+> **"Did I identify the problem and design the solution myself?"**
+
+---
+
+# 💼 But you asked about resume-friendly projects too
+
+I don't want to just throw 20 projects at you because that would defeat the whole point.
+
+Instead, here's a **project ladder**. Pick ONE category that genuinely interests you, then invent the specific project.
+
+### Level 1: Personal utility
+
+Use:
+
+* functions
+* conditionals
+* loops
+* exceptions
+* libraries
+* file I/O
+
+Examples of *problems*, not finished projects:
+
+> "I want to organize something."
+
+> "I want to track something."
+
+> "I want to search something."
+
+> "I want to convert something."
+
+> "I want to automate something I repeatedly do."
+
+These are perfect right now.
+
+---
+
+### Level 2: Data + API project
+
+You've already used `requests`, so this is especially relevant.
+
+Find something you personally care about and ask:
+
+> "Is there an API for this?"
+
+Could be:
+
+* weather
+* books
+* movies
+* games
+* jokes
+* public datasets
+* currency
+* astronomy
+* GitHub
+* sports
+
+But **don't start with "what API project should I make?"**
+
+Start with:
+
+> "What information would I actually like to retrieve automatically?"
+
+Then find the API.
+
+That's much closer to real development.
+
+---
+
+### Level 3: Automation
+
+This is where Python starts becoming **useful rather than merely educational**.
+
+Look around your computer.
+
+Ask:
+
+> **"What am I doing manually that a stupid little robot could do?"**
+
+That question is GOLD. 🗿
+
+For example:
+
+* renaming files
+* sorting files
+* generating folders
+* processing text
+* extracting information
+* checking files
+* generating reports
+* converting formats
+* searching through documents
+
+Then build your own solution.
+
+---
+
+### Level 4: Small software
+
+Once you finish OOP + regex, start making something that feels like a tiny application.
+
+For example, something involving:
+
+```text
+User
+    ↓
+Input
+    ↓
+Validation
+    ↓
+Processing
+    ↓
+Storage
+    ↓
+Output
+```
+
+Now you're moving beyond "Python exercise" territory.
+
+---
+
+# ⭐ And here's something I REALLY want you to start doing
+
+Before writing code, create this:
+
+```text
+PROJECT.md
+```
+
+And write:
+
+```text
+# Project Name
+
+## Problem
+What problem am I solving?
+
+## Idea
+What do I want the program to do?
+
+## Input
+What does the user give me?
+
+## Output
+What should the program produce?
+
+## Features
+1.
+2.
+3.
+
+## Rules
+What should happen when something goes wrong?
+
+## Possible Improvements
+1.
+2.
+3.
+```
+
+**Do not write code yet.**
+
+This forces your brain to become the architect.
+
+Then start coding.
+
+---
+
+# 🧠 The "20-minute stuck rule"
+
+This one is important.
+
+Suppose you're building your own project and think:
+
+> "How do I make Python do X?"
+
+Don't immediately ask me.
+
+Try this:
+
+### 1. Think
+
+"What do I already know that could help?"
+
+### 2. Search the documentation
+
+Google something specific.
+
+Bad:
+
+> `python project help`
+
+Good:
+
+> `Python pathlib rename file`
+
+### 3. Search examples
+
+Look at **how other people use the feature**, but don't copy the entire project.
+
+### 4. Try something stupid
+
+Seriously.
+
+Write the ugly version.
+
+```python
+# I have no idea if this works
+```
+
+Try it.
+
+It fails.
+
+Good.
+
+Now you have a **specific problem**.
+
+### 5. Then ask me
+
+Instead of:
+
+> "Make this project for me."
+
+you can ask:
+
+> "I'm trying to move `.pdf` files into a folder. I wrote this, but it's giving me X error. Explain what's wrong without writing the solution."
+
+THAT kind of question will make you improve ridiculously faster.
+
+---
+
+# 🛑 One rule I'd like you to adopt with me
+
+When you're doing a self-created project, tell me:
+
+> **"Don't give me the solution unless I explicitly ask."**
+
+Then I'll act more like your debugging partner.
+
+I can:
+
+* give hints
+* explain an error
+* ask questions
+* review your architecture
+* point out bugs
+* explain documentation
+* review your finished project
+* suggest improvements
+
+But **you write the actual solution**.
+
+That will train your independence much better.
+
+---
+
+# 🚀 And for your resume...
+
+Don't obsess over having 15 projects.
+
+I'd rather see you eventually have something like:
+
+```text
+GitHub
+│
+├── Python
+│   ├── personal-automation-tool
+│   ├── api-based-project
+│   ├── file-processing-tool
+│   └── larger-python-application
+│
+├── DSA
+│   └── ...
+│
+└── later...
+    ├── NumPy
+    ├── Pandas
+    ├── ML
+    └── AI projects
+```
+
+And each project should have:
+
+```text
+README.md
+    ↓
+What problem does it solve?
+Why did I build it?
+How does it work?
+How do you run it?
+What did I learn?
+What would I improve?
+```
+
+A project you can **explain deeply** is far more valuable to you than a fancy-looking project whose code you mostly assembled from tutorials.
+
+---
+
+## 🎯 Your challenge
+
+For your **next project**, don't ask me for an idea.
+
+For the next **3 days**, keep a tiny `PROJECT_IDEAS.txt`.
+
+Every time you notice a problem, write it down.
+
+You might get:
+
+```text
+1. My files are messy.
+2. I keep forgetting X.
+3. I repeatedly calculate X.
+4. Searching through X is annoying.
+5. I wonder if I can automate X.
+6. It would be cool if X could talk to Y.
+```
+
+Then pick **the one that makes you think:**
+
+> "Wait... I could actually build that."
+
+That's your first independently conceived project. 🐍⚙️
+
+And when you come to me with it, don't bring me:
+
+> "Here's my project idea, give me the code."
+
+Bring me:
+
+> **"Here's what I want to build. Here's my plan. Here's what I've tried. Something is broken."**
+
+That's when I'll happily sit beside you with the metaphorical screwdriver. 🔧😌
+------------------------------------------------------------------------------
+
+
+# Python Projects
+
+## 1. Study Assistant
+
+### Original Idea
+
+I want to build a personal study assistant for Windows that is more than a simple to-do list or notification app.
+
+The purpose is to help me actually follow my study plans instead of only reminding me about them.
+
+The application should allow me to create study plans, divide them into study sessions, schedule those sessions, start a focused study session, and record whether I actually completed the planned work.
+
+The long-term idea is for the application to behave more like a personal learning assistant that helps me plan, execute, track, and improve my studying.
+
+### Core Problem
+
+I often make study plans, but creating a plan and actually following it are two different things. Existing planners can tell me what I planned to do, but I want to build something that actively guides me through the process.
+
+### Initial Version
+
+Start extremely small.
+
+The first version should simply allow me to:
+
+* Create a study task.
+* Give it a duration.
+* Start the session.
+* Finish the session.
+* Record whether I completed it.
+
+I will gradually expand the project as I learn more Python.
+
+### Long-Term Possibilities
+
+The project may eventually include:
+
+* Daily and weekly study planning.
+* Time-blocked schedules.
+* Recurring study sessions.
+* Progress tracking.
+* Missed-session handling.
+* Study statistics.
+* Focus sessions and timers.
+* Automatic rescheduling.
+* Windows notifications.
+* Windows-level focus/automation features.
+* A graphical interface.
+* Persistent database storage.
+* An intelligent assistant that can eventually help adjust my study schedule.
+
+### Important Rule
+
+Do not try to build the complete application immediately.
+
+Build it one small piece at a time and let the project grow alongside my Python skills.
+
+---
+
+# 2. Knowledge Jar / Research Quest
+
+### Original Idea
+
+I want to create a digital version of a glass jar filled with random chits.
+
+Each chit contains a topic, question, idea, or subject that I can research.
+
+Whenever I want to start a new research challenge, I draw a random chit from the jar.
+
+For example:
+
+"How does GPS actually work?"
+
+"Why do neural networks need activation functions?"
+
+"How did the number zero develop?"
+
+"Why do languages change?"
+
+The selected topic becomes my current research quest.
+
+### Core Problem
+
+I want to develop the habit of exploring different subjects, researching deeply, and actually finishing what I start instead of constantly jumping from one interesting topic to another.
+
+### Research Quest System
+
+When I draw a topic, I should work on it for a defined period and collect:
+
+* Sources.
+* Research notes.
+* Important information.
+* Questions.
+* Ideas.
+* Connections to other topics.
+
+At the end of the research period, I should produce a written piece about the topic.
+
+The goal is not simply to "look something up."
+
+The goal is to investigate the subject deeply enough to create something of my own from the research.
+
+### Completion System
+
+A topic should not simply disappear after being selected.
+
+The topic remains part of the jar and can potentially be drawn again in the future.
+
+However, I should have to complete the current research quest before I am allowed to start another one.
+
+This creates a rule:
+
+**Choose → Research → Write → Complete → Return the topic to the jar → Draw again**
+
+### Initial Version
+
+The first version should be extremely simple:
+
+* Store topics.
+* Randomly select one topic.
+* Display the selected topic.
+* Track the current topic.
+* Mark the topic as completed.
+
+### Long-Term Possibilities
+
+The project may eventually include:
+
+* Research deadlines.
+* Research sessions.
+* Source tracking.
+* Notes.
+* Written submissions.
+* Completion requirements.
+* Research history.
+* Statistics.
+* Difficulty levels.
+* Topic categories.
+* Related-topic suggestions.
+* Persistent storage.
+* SQLite database.
+* GUI/web interface.
+* Eventually intelligent topic recommendations.
+
+### Important Rule
+
+The project should preserve the original "glass jar" feeling.
+
+The software should feel like drawing a random intellectual adventure rather than simply choosing an item from a boring list.
+
+---
+
+# 3. Consistency & Learning Tracker
+
+### Original Idea
+
+I want to build a system that helps me understand whether I am actually being consistent with the goals I set for myself.
+
+The purpose is not simply to create another streak counter.
+
+I want to compare what I planned to do with what I actually did.
+
+### Core Problem
+
+I often start things with motivation and create plans, but maintaining consistency over a long period is difficult.
+
+Many productivity applications focus heavily on reminders, streaks, or checklists.
+
+I want to understand my actual behavior.
+
+### Initial Version
+
+The first version should record:
+
+* Goal.
+* Planned sessions.
+* Completed sessions.
+* Missed sessions.
+* Time spent.
+* Date.
+
+The program should then show a simple summary of my progress.
+
+For example:
+
+Planned sessions: 10
+Completed sessions: 8
+Missed sessions: 2
+Completion rate: 80%
+
+### Long-Term Possibilities
+
+The project may eventually track:
+
+* Daily consistency.
+* Weekly consistency.
+* Monthly progress.
+* Planned vs actual study time.
+* Missed sessions.
+* Average session duration.
+* Longest consistent period.
+* Subjects or skills.
+* Progress over time.
+* Reasons for missed sessions.
+* Patterns in my studying.
+* Visual statistics.
+* Automatic reports.
+
+### Important Rule
+
+The purpose is not to create pressure through meaningless streaks.
+
+The goal is to collect useful information about my own learning behavior and use that information to improve my system.
+
+---
+
+# Overall Development Philosophy
+
+These projects should NOT be built completely at once.
+
+I will start with a tiny working version and gradually expand it as my programming skills improve.
+
+The first version may be very simple.
+
+That is okay.
+
+The goal is to learn how to turn a real problem into software.
+
+I should try to design and implement the solution myself before asking for complete solutions.
+
+When I get stuck, I should:
+
+1. Think about the problem.
+2. Read Python documentation.
+3. Search for the specific concept I need.
+4. Experiment with small pieces of code.
+5. Debug my own attempt.
+6. Ask for help only when I need it.
+
+I want these projects to grow naturally from my own ideas rather than being copied from tutorials.
+
+The final goal is to have projects that I genuinely understand, genuinely use, and can confidently explain in a resume or interview.
+
+
+# 4. Recommendation Roulette
+
+### Original Idea
+
+I want to build a personal recommendation system that helps me decide what to read or watch when I don't know what to choose.
+
+Instead of showing me a huge list of recommendations, the system should ultimately give me **only one recommendation**.
+
+I should be able to tell the program what kind of experience I want, such as:
+
+* Genre.
+* Mood.
+* Type of story.
+* Length.
+* Language.
+* Era.
+* Fiction or non-fiction.
+* Book, novel, movie, or series.
+* Other preferences that I gradually add to the system.
+
+The system should then use these preferences to create a pool of possible choices and use a random selection mechanism to choose one final recommendation.
+
+### Core Idea
+
+The goal is not to build another search engine that gives me hundreds of results.
+
+The goal is:
+
+**Tell the system what I want → let the system make the decision → get ONE thing to read or watch.**
+
+For example:
+
+Input:
+
+Genre: Mystery
+Mood: Dark
+Format: Novel
+
+Output:
+
+🎲 **One randomly selected recommendation**
+
+The recommendation should come with enough information for me to decide whether I want to accept the challenge.
+
+### Important Rule
+
+Once the system gives me a recommendation, I should actually experience it rather than immediately asking for another recommendation.
+
+For example:
+
+**Recommendation → Read/Watch → Finish → Record experience → Return to the system**
+
+This could eventually become part of a personal reading and watching tracker.
+
+### Initial Version
+
+Start with a small manually created collection of books, novels, movies, and series.
+
+Each item can contain information such as:
+
+* Title.
+* Type.
+* Genre.
+* Mood.
+* Language.
+* Year.
+* Length.
+* Rating or personal score.
+* Tags.
+
+The program should:
+
+1. Ask what type of thing I want.
+2. Ask for some preferences.
+3. Filter the collection.
+4. Randomly select one suitable item.
+5. Display only that recommendation.
+
+### Future Recommendation System
+
+As the project develops, the random selection should become more intelligent.
+
+Instead of every matching item having exactly the same chance, different preferences could affect the probability of selection.
+
+For example:
+
+A recommendation could receive points based on how closely it matches my preferences.
+
+Then randomness could be applied among the items with suitable scores.
+
+This creates a balance between:
+
+**Personalization + Randomness**
+
+The system should still surprise me instead of always giving me the most obvious choice.
+
+### Reading / Watching History
+
+Eventually, the system could remember:
+
+* What I was recommended.
+* Whether I accepted it.
+* Whether I finished it.
+* When I finished it.
+* My personal rating.
+* What I liked about it.
+* What I disliked.
+* Whether I would recommend it to someone else.
+
+This history could then influence future recommendations.
+
+### Long-Term Possibilities
+
+The project may eventually include:
+
+* Larger databases of books and movies.
+* APIs for retrieving information.
+* Personal preference profiles.
+* Recommendation scoring.
+* Weighted randomness.
+* Reading history.
+* Watch history.
+* Reviews and ratings.
+* Genre and mood analysis.
+* Similar-item recommendations.
+* Recommendation explanations.
+* SQLite/database storage.
+* GUI or web interface.
+* Eventually machine-learning-based recommendations.
+
+### Possible Expansion
+
+The project could eventually become a broader personal discovery system rather than only a book recommender.
+
+It could recommend:
+
+📚 Books
+📖 Novels
+🎬 Movies
+📺 Series
+🎧 Music
+📰 Articles
+🧠 Research topics
+
+The central concept remains the same:
+
+**Give me one interesting thing I probably would not have chosen myself.**
+
+### Development Philosophy
+
+Do not begin by trying to build an advanced recommendation algorithm.
+
+Start with:
+
+**Collection → Filters → Random choice**
+
+Then gradually introduce:
+
+**Scoring → Weighted randomness → Personal history → Personalization → Intelligent recommendations**
+
+The system should become more sophisticated only when I understand the technology required to build each stage.
+---------------------------
+
+
+
+
+
+HAHA fair 😭 You caught me recycling your own ideas and putting a little project bow on them.
+
+Let's actually give you **five completely different ideas**. And I'll deliberately avoid giving you a full recipe, because I want *you* to design the thing.
+
+## 1. 🕵️ Personal Mystery Solver
+
+Build a program that gives you a mystery/problem and makes you investigate it.
+
+Not necessarily murder mysteries. Think:
+
+* historical mysteries
+* strange scientific phenomena
+* unsolved questions
+* "How did X happen?"
+* "Why does X work this way?"
+
+The program could maintain cases, clues, evidence, hypotheses, and your final conclusion.
+
+**Interesting technical direction:** data modeling, files/database, search, scoring hypotheses, eventually APIs.
+
+**Why I like it:** you're building a little investigation system rather than another CRUD app.
+
+---
+
+## 2. 🧹 Digital Declutter Assistant
+
+Your computer slowly turns into a digital junk drawer.
+
+Build a tool that scans a chosen folder and tells you things like:
+
+```text
+Files found: 1,247
+
+Large files:       34
+Duplicate names:   17
+Old files:        281
+Empty folders:     12
+Unknown extensions: 8
+```
+
+But **don't automatically delete anything**.
+
+Let the user inspect and decide what happens.
+
+Later you could add:
+
+* duplicate detection
+* file age analysis
+* size analysis
+* extension classification
+* safe cleanup
+* undo/logging
+* scheduled scans
+
+This could become a genuinely useful Windows utility.
+
+---
+
+## 3. 🧩 Adaptive Quiz Engine
+
+Not a normal quiz.
+
+Build a system that **changes the next question based on your previous answers**.
+
+For example:
+
+```text
+Question 1 → Easy
+      ↓
+Correct
+      ↓
+Question 2 → Medium
+      ↓
+Wrong
+      ↓
+Question 3 → Easier
+```
+
+But don't stop there.
+
+Eventually ask:
+
+> How should the program decide what I need to practice?
+
+You could experiment with:
+
+* difficulty
+* accuracy
+* response time
+* repeated mistakes
+* topic weaknesses
+* spaced repetition
+
+This one could eventually become a really interesting bridge toward **AI/ML concepts**.
+
+---
+
+## 4. 🔍 Text Detective
+
+Give your program a large piece of text and make it investigate the text.
+
+For example, it could discover:
+
+* most common words
+* longest sentences
+* repeated phrases
+* unusual words
+* reading time
+* vocabulary diversity
+* sentence length
+* frequently occurring names
+* questions vs statements
+
+Then eventually give it multiple documents and ask:
+
+> **"What is different between these two texts?"**
+
+That could evolve into:
+
+```text
+Text processing
+      ↓
+NLP
+      ↓
+similarity
+      ↓
+embeddings
+      ↓
+ML
+```
+
+And that makes it particularly relevant to your eventual AI path.
+
+---
+
+## 5. 🎮 Tiny Simulation World
+
+This one is deliberately weird.
+
+Build a tiny world populated by entities that follow rules.
+
+For example:
+
+```text
+World
+ ├── Humans
+ ├── Food
+ ├── Resources
+ └── Environment
+```
+
+Each entity has properties and makes decisions.
+
+Maybe:
+
+```text
+Food available?
+     ↓
+Yes → eat
+No  → search
+```
+
+Then let the simulation run.
+
+You could experiment with:
+
+* populations
+* resources
+* weather
+* reproduction
+* cooperation
+* competition
+* random events
+* survival
+
+Start with something hilariously tiny.
+
+Eventually you could have hundreds of simulated entities interacting.
+
+This would teach you a LOT about:
+
+* OOP
+* state
+* algorithms
+* randomness
+* data structures
+* simulation
+* debugging
+* system design
+
+And it's the kind of project where you can genuinely say:
+
+> "I wanted to see what would happen if..."
+
+That's a fantastic reason to build software.
+
+---
+
+# 🏆 If I were choosing a learning order
+
+Not a ranking of "best", because that depends on what you enjoy. But in terms of **different skills**, these give you five very different playgrounds:
+
+| Project              | Main skill                   |
+| -------------------- | ---------------------------- |
+| 🕵️ Mystery Solver   | Data + investigation logic   |
+| 🧹 Digital Declutter | Automation + filesystem      |
+| 🧩 Adaptive Quiz     | Algorithms + personalization |
+| 🔍 Text Detective    | Text processing → NLP        |
+| 🎮 Simulation World  | OOP + algorithms + systems   |
+
+And notice something important:
+
+**None of these requires you to know ML right now.**
+
+You can build the primitive version with your current Python knowledge, then keep upgrading it as your skills grow.
+
+That's exactly the kind of project I want you making now: **small enough to start, deep enough that you can keep discovering problems inside it.** 🐍⚙️✨
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,522 @@
+PYTHON: FOR LOOP SCOPE + sorted() + key
+========================================
+
+
+1. PYTHON FOR LOOP DOES NOT CREATE A NEW SCOPE
+------------------------------------------------
+
+In Python, a normal for loop does NOT create a separate/local scope.
+
+Example:
+
+for i in range(3):
+    x = 10
+
+print(x)
+
+Output:
+10
+
+Why?
+
+Because the for loop does not create a new scope.
+
+So:
+
+for i in range(3):
+    ...
+
+The variable i still exists after the loop.
+
+
+Same applies to if and while:
+
+if True:
+    x = 10
+
+print(x)       # works
+
+
+while False:
+    y = 20
+
+print(y)       # y would not exist because the loop never ran,
+               # but while itself does NOT create a new scope.
+
+
+IMPORTANT:
+
+Python:
+    for loop       -> NO new scope
+    while loop     -> NO new scope
+    if statement   -> NO new scope
+    function       -> YES, new scope
+    class          -> YES, new scope
+
+
+
+2. FUNCTION CREATES A NEW SCOPE
+--------------------------------
+
+Example:
+
+def hello():
+    x = 10
+
+hello()
+
+print(x)
+
+This gives an error because x is local to the function.
+
+The x inside the function belongs to the function's local scope.
+
+
+IMPORTANT:
+
+The variable name can be the same, but they can still be
+different variables because they belong to different scopes.
+
+
+
+3. MY STUDENT EXAMPLE
+----------------------
+
+students = [
+    {"name": "Harry", "Place": "London"},
+    {"name": "Ron", "Place": "London"},
+    {"name": "Hermione", "Place": "London"}
+]
+
+
+for student in students:
+    print(student)
+
+
+Here, student is created by the for loop.
+
+BUT the for loop does NOT create a separate scope.
+
+Therefore, after the loop, student still exists.
+
+
+Example:
+
+for student in students:
+    print(student)
+
+print(student)       # works
+
+
+IMPORTANT:
+
+The student in the for loop is NOT local to the loop.
+
+It exists in the surrounding scope.
+
+
+
+4. BUT student INSIDE A FUNCTION IS DIFFERENT
+----------------------------------------------
+
+def get_student(student):
+    return student["name"]
+
+
+Here:
+
+student
+
+is a parameter of the function.
+
+Therefore it is LOCAL to the function.
+
+It exists only during that function call.
+
+So these are two different variables:
+
+for student in students:
+    ...
+
+and:
+
+def get_student(student):
+    ...
+
+
+They have the same name, but they belong to different scopes.
+
+
+
+5. WHAT DOES get_student() DO?
+-------------------------------
+
+def get_student(student):
+    return student["name"]
+
+
+This function takes ONE student dictionary as an argument.
+
+Example:
+
+student = {"name": "Harry", "Place": "London"}
+
+get_student(student)
+
+The function receives:
+
+student = {"name": "Harry", "Place": "London"}
+
+and returns:
+
+"Harry"
+
+
+
+6. sorted() WITHOUT key
+------------------------
+
+Example:
+
+students = [
+    "Harry lives in London",
+    "Ron lives in Delhi",
+    "Hermione lives in Mumbai"
+]
+
+sorted(students)
+
+
+Python sorts the items themselves.
+
+For strings, Python compares them from left to right.
+
+So it first looks at the beginning of each string.
+
+Because the name is at the beginning:
+
+"Harry lives in London"
+"Hermione lives in Mumbai"
+"Ron lives in Delhi"
+
+It looks like we are sorting by name.
+
+BUT technically Python is sorting the WHOLE STRING.
+
+It is NOT specifically thinking:
+
+"These are student names."
+
+It is simply comparing the strings.
+
+
+
+7. WHY key= EXISTS
+-------------------
+
+Sometimes we don't want to sort according to the entire item.
+
+We want to tell sorted():
+
+"Use THIS particular value from each item to decide the order."
+
+
+Example:
+
+students = [
+    {"name": "Harry", "Place": "London"},
+    {"name": "Ron", "Place": "London"},
+    {"name": "Hermione", "Place": "London"}
+]
+
+
+If we do:
+
+sorted(students)
+
+Python does not know that we specifically want to sort by "name".
+
+
+So we create:
+
+def get_student(student):
+    return student["name"]
+
+
+Then:
+
+sorted(students, key=get_student)
+
+
+means:
+
+"Sort students, but use get_student to decide the sorting value."
+
+
+
+8. IMPORTANT: get_student IS NOT BEING CALLED BY ME
+----------------------------------------------------
+
+When we write:
+
+sorted(students, key=get_student)
+
+we do NOT write:
+
+key=get_student()
+
+
+There are NO parentheses.
+
+Why?
+
+Because we are giving the FUNCTION itself to sorted().
+
+We are basically saying:
+
+"Here is the function. You use it."
+
+
+sorted() will call the function when it needs to.
+
+Conceptually, sorted() does something like:
+
+get_student(student1)
+get_student(student2)
+get_student(student3)
+
+
+Then it gets:
+
+"Harry"
+"Ron"
+"Hermione"
+
+
+and uses those values to determine the sorting order.
+
+
+So:
+
+get_student
+    = giving the function itself
+
+get_student()
+    = calling the function immediately
+
+
+
+9. key= IS LIKE GIVING sorted() A TOOL
+---------------------------------------
+
+Think of:
+
+sorted(students, key=get_student)
+
+as:
+
+"Hey sorted(), here is a tool called get_student.
+Use this tool on each student to find the value
+you should use for sorting."
+
+
+For each student:
+
+student
+   |
+   v
+get_student(student)
+   |
+   v
+student["name"]
+   |
+   v
+name
+   |
+   v
+sorted uses that name for sorting
+
+
+
+10. key DOES NOT ONLY WORK WITH STRINGS
+-----------------------------------------
+
+key can tell sorted() to use different kinds of values.
+
+Example:
+
+words = ["cat", "elephant", "dog", "ant"]
+
+sorted(words, key=len)
+
+
+Here:
+
+len
+
+is the key function.
+
+Python uses the LENGTH of each word for sorting.
+
+Results:
+
+["cat", "ant", "dog", "elephant"]
+
+
+So:
+
+key = "What value should I use to decide the sorting order?"
+
+
+
+11. SORTING BY DIFFERENT DICTIONARY VALUES
+--------------------------------------------
+
+Suppose:
+
+students = [
+    {"name": "Harry", "Place": "London"},
+    {"name": "Ron", "Place": "Delhi"},
+    {"name": "Hermione", "Place": "Mumbai"}
+]
+
+
+Sort by NAME:
+
+def get_name(student):
+    return student["name"]
+
+sorted(students, key=get_name)
+
+
+Sort by PLACE:
+
+def get_place(student):
+    return student["Place"]
+
+sorted(students, key=get_place)
+
+
+So key allows us to choose WHICH VALUE inside each item
+should be used for sorting.
+
+
+
+12. MAIN DIFFERENCE
+-------------------
+
+WITHOUT key:
+
+sorted(students)
+
+    -> sort according to the items themselves
+
+
+WITH key:
+
+sorted(students, key=get_student)
+
+    -> use get_student() on each item
+    -> get the value returned by the function
+    -> sort according to those returned values
+
+
+
+13. MOST IMPORTANT THING TO REMEMBER
+-------------------------------------
+
+sorted(students)
+
+means:
+
+"Sort these items themselves."
+
+
+sorted(students, key=get_student)
+
+means:
+
+"Sort these items using the value returned by get_student()
+as the sorting value."
+
+
+And:
+
+key=get_student
+
+does NOT mean:
+
+"Call get_student right now."
+
+It means:
+
+"Here is the function. sorted() can call it when needed."
+
+
+
+14. PYTHON SCOPE RULE TO REMEMBER
+----------------------------------
+
+FOR LOOP:
+    Does NOT create a new scope.
+
+WHILE LOOP:
+    Does NOT create a new scope.
+
+IF:
+    Does NOT create a new scope.
+
+FUNCTION:
+    DOES create a new scope.
+
+CLASS:
+    DOES create a new scope.
+
+
+Therefore:
+
+for student in students:
+    ...
+
+student can still exist after the loop.
+
+
+But:
+
+def get_student(student):
+    ...
+
+the parameter student is local to get_student().
+
+
+
+15. ONE-LINE MEMORY TRICK
+--------------------------
+
+FOR LOOP = no new scope.
+
+FUNCTION = new scope.
+
+sorted(...):
+    no key -> sort the items themselves
+
+sorted(..., key=function):
+    use the function's returned value to sort
+
+
+key = "What should sorted() LOOK AT?"
+
+
+------------------------------------------
+
+now suppose we have a file name names .txt 
+we come up a problem
+laiba,Number four  , city palace
+ahmad,Amsterdam
+now if we read it using name and place it will gives value error because , this in address also treat as breaking point in csv
+we can use the split the first comma function split(",", 1) 
+or we can use this names, *places = line.rstrip().split(",") Use * to collect the remaining values
+
+but this kinda works on basic code when u come up with more complex code 
+u need better approaches
+that why a module named csv exist to solve our problem

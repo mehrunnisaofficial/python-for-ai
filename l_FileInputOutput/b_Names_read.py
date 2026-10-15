@@ -1,47 +1,84 @@
-# Now I wanna see what data we stored in Names.txt
+# Now I wanna see what data we stored in b_Names.txt
 
 """
 for i in range(size):
     student = input("Enter user name: ").strip().capitalize()
 
-    with open("Names.txt", "a") as file:
+    with open("b_Names.txt", "a") as file:
         file.write(f"{student}\n")
 """
 
-with open("Names.txt", "r") as file:
-    line = file.readlines()         # means reading all the lines from a file than store it in a list from in a variable named line
 
-for lines in line:
+
+
+# Multiple ways to read from a file 
+# - using readlines
+# - using read
+# - using readline
+# - using for loop          ( detail in notes )
+
+# MEthod 1
+
+print("\tMETHOD 1\n")
+
+with open ("b_Names.txt") as file:
+    content = file.read()
+
+print(content)
+
+# names.txt  ──read()──►  "Harry\nHermione\nRon\n"     (ONE big string)
+
+print("--------------------------------------")
+
+# Method 2
+print("\tMETHOD 2\n")
+with open ("b_Names.txt") as file:
+    content1 = file.readline()
+    content2 = file.readline()
+
+print(content1)
+print(content2)
+
+# 'Harry\n'
+# 'Hermione\n'
+
+print("--------------------------------------")
+
+# MEthod 3
+print("\tMETHOD 3\n")
+with open ("b_Names.txt") as file:
+    Merifile = file.readlines()
+print(content1)               # gives a list
+
+# thats why we use for loop to print each name
+for lines in Merifile:
     print(lines)
+# gives a list with \n character in each name
+
+
 
 # But the things is we had \n while storing names of the human and than 
 # print by default gave extra lines
 # so in total 2 lines
 
 print("--------------------------------------")
-
+print("\tMETHOD 3.1 Formatting\n")
 # we can use format method end = ""
-for lines in line:
+for lines in Merifile:
     print(lines, end = "")
 
 
 print("--------------------------------------")
 
-# But there is another mehtod that is using rstrip() 
-# which means it remove unwanted stuff from the right side of the string.
-for lines in line:
+# # But there is another mehtod that is using rstrip() 
+# # which means it remove unwanted stuff from the right side of the string.
+print("\tMETHOD 3.2 Formatting\n")
+for lines in Merifile:
     print(lines.rstrip())
 
 print("--------------------------------------")
 
-# more pythonic way to do the same stuff is 
 
-with open("Names.txt", "r") as file:   # Open Names.txt in read ("r") mode and store the file object in file
-    for line in file:                  # Loop through the file one line at a time
-        print(line.rstrip())           # Remove the newline/extra whitespace from the end and print the line
-
-
-print("--------------------------------------")
 
 # But I want my name to be sorted manner
 # Lets go little back
@@ -49,8 +86,8 @@ print("--------------------------------------")
 # in sorted manner
 
 names = []
-
-with open("Names.txt") as file:          # opening a file default mode is read
+print("\tMETHOD 3.4 Formatting\n")
+with open("b_Names.txt") as file:          # opening a file default mode is read
     for line in file:
         names.append(line)               # and here we are appending in a list on in Names.txt file
 
@@ -64,22 +101,42 @@ print("--------------------------------------")
 
 
 # For doing Z -> A
-for name in sorted(names, key= str.lower ,reverse = True):
+print("\tMETHOD 3.5 Sorting\n")
+for name in sorted(names ,reverse = True):
     print(name.rstrip())
 
 
 print("--------------------------------------")
 
 # How to find specific name in a file
-with open("Names.txt", "r") as file:   # Open Names.txt in read ("r") mode and store the file object in file
+print("\tFinding a specific name in the file\n")
+with open("b_Names.txt", "r") as file:   # Open Names.txt in read ("r") mode and store the file object in file
     for line in file:                  # Loop through the file one line at a time
         if(line != "Pure"):
             print("Not found the name")
             break
         print("found")
+
+
+
+print("--------------------------------------")
         
 
+# more pythonic way to do the same stuff is 
+print("\tMETHOD 4\n")
+with open("b_Names.txt", "r") as file:   # Open Names.txt in read ("r") mode and store the file object in file
+    for line in file:                  # Loop through the file one line at a time
+        print(line.rstrip())           # Remove the newline/extra whitespace from the end and print the line
 
+
+print("--------------------------------------")
+
+
+print("\tAnother Method\n")
+
+with open("b_Names.txt") as Names_File:
+    for line in sorted(Names_File):                # file itself is sorted without using any list and another loop
+        print(line.rstrip())
 
 
 
